@@ -2,6 +2,7 @@ export default [
   {
     title: "Summit 2026",
     repo: "g0v-summit/2026/board",
+    inboxLabel: `Status::Inbox`,
     groupLabelPrefix: `組別::`,
     groupLabelPostfix: `組`,
     groupList: {

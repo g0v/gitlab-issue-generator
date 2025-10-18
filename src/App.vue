@@ -23,7 +23,7 @@
         @change="updateLinks"
         :toolbar="toolbar"
       ></v-md-editor>
-      <label>Options</label>
+      <label>選項</label>
       <div class="options">
         <div class="option">
           <input type="checkbox" v-model="options.autoAssign" @change="updateLinks" id="autoAssign" />
@@ -90,7 +90,7 @@
   accent-color: rgb(var(--theme-color))
 body,html
   font-family: Onest, Candara, 'Source Han Sans TC', 'Noto Sans TC', sans-serif !important
-.v-md-textarea-editor pre, .v-md-textarea-editor textarea,.vuepress-markdown-body
+pre, code, .v-md-textarea-editor pre, .v-md-textarea-editor textarea,.vuepress-markdown-body
   font-family: 'Geist Mono', 'Source Han Sans TC', 'Noto Sans TC', monospace !important
 *
   box-sizing: border-box
