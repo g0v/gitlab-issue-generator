@@ -3,18 +3,18 @@
   <div id="wrapper">
     <header>
       <div class="container">
-        <div class="title">{{ selectedEvent||'' }} Issue 小精靈</div>
-        <p>幫你開 Issue 的小精靈</p>
+        <div class="title">{{ selectedEvent||'' }} 開票小工具</div>
+        <p>協助批次建立 GitLab 待辦事項的小精靈</p>
       </div>
     </header>
     <main class="container" v-if="selectedEvent">
       <div class="box">
         <div class="title">小提醒</div>
-        <p>在 Title 或 Description 輸入 #{group} 會自動帶入組別名稱。</p>
+        <p>在標題或內容輸入 <code>#{group}</code> 會自動帶入組別名稱。</p>
       </div>
-      <label>Title</label>
+      <label>標題</label>
       <input v-model="title" @input="updateLinks" />
-      <label>Description</label>
+      <label>內容</label>
       <v-md-editor
         left-toolbar="undo redo | h bold italic strikethrough quote | ul ol table hr | name pancake"
         right-toolbar="preview"
@@ -27,7 +27,7 @@
       <div class="options">
         <div class="option">
           <input type="checkbox" v-model="options.autoAssign" @change="updateLinks" id="autoAssign" />
-          <label for="autoAssign">自動 Assign 組長</label>
+          <label for="autoAssign">自動指派給組長</label>
         </div>
         <div class="option">
           <input
@@ -49,7 +49,7 @@
         />
       </div>
       <button @click="createIssue" class="magic-button">🪄 來點魔法！</button>
-      <p class="text-center">若魔法施展失敗，請檢查瀏覽器是否封鎖了快顯視窗，或直接點擊下方連結。</p>
+      <p class="text-center">若魔法施展失敗，請檢查瀏覽器是否封鎖了快顯視窗，或直接點選下方連結。</p>
       <div class="links">
         <a
           v-for="link in links"
@@ -75,22 +75,23 @@
       </div>
     </main>
     <footer>
-      Developed by
-      <a href="https://gnehs.net" target="_blank">勝勝寶寶</a> | Made with
-      <span @click="randomThemeColor">🥞</span> in Taiwan |
-      <a href="https://github.com/gnehs/issue-generator" target="_blank">GitHub</a>
+      Developed by 勝勝寶寶 | Made with
+      <span @click="randomThemeColor">🥞</span> in Taiwan | Forked for g0v on
+      <a href="https://github.com/g0v/gitlab-issue-generator" target="_blank">GitHub</a>
     </footer>
   </div>
 </template>
 
 <style lang="sass">
 \:root
-  --theme-color: 244, 169, 64
+  --theme-color: 199, 0, 0
   --border-color: #ddd
   line-height: 1.5
   accent-color: rgb(var(--theme-color))
-body,html,.v-md-textarea-editor pre, .v-md-textarea-editor textarea,.vuepress-markdown-body
-  font-family: 'Ubuntu Mono', 'Noto Sans TC', sans-serif !important
+body,html
+  font-family: Onest, Candara, 'Source Han Sans TC', 'Noto Sans TC', sans-serif !important
+.v-md-textarea-editor pre, .v-md-textarea-editor textarea,.vuepress-markdown-body
+  font-family: 'Geist Mono', 'Source Han Sans TC', 'Noto Sans TC', monospace !important
 *
   box-sizing: border-box
   transition: all 0.2s ease
