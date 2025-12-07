@@ -6,14 +6,14 @@ export default [
     groupLabelPrefix: `組別::`,
     groupLabelPostfix: `組`,
     groupList: {
-      '總召': ['RSChiang'],
+      '總籌': ['RSChiang'],
       '行政': ['lili668668'],
       '議程': ['paulpengtw', 'ted.lu.tw'],
       '宣傳': ['rr371'],
       '贊助': ['coldplay5566'],
-      '場務': ['Allenwang6212'],
+      '場務': ['fearnot', 'qiqii77'],
       '財務': ['Yanyiyi'],
-      '紀錄': [''],
+      '紀錄': ['moontai0724'],
     },
   },
 ]
